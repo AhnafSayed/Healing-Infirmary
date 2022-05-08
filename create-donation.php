@@ -131,12 +131,12 @@ if (mysqli_num_rows($result) > 0) {
     
 	      <div class="form-group">
             <label class="control-label">Name:<span class="text-danger">*</span></label>
-            <input type="name" name="name" id="" class="form-control" placeholder="Full Name" autocomplete="off">
+            <input type="name" name="name" id="name" class="form-control" placeholder="Name" autocomplete="off">
           </div>
 			
           <div class="form-group">
             <label class="control-label">NID No:<span class="text-danger">*</span></label>
-            <input type="nid_no" name="nidno" id="" class="form-control" placeholder=" NID No." autocomplete="off">
+            <input type="nid_no" name="nidno" id="nid" class="form-control" placeholder="NID number" autocomplete="off">
           </div>
         
           <div class="form-group">
@@ -165,8 +165,44 @@ if (mysqli_num_rows($result) > 0) {
         </form>
       </div>
     </div>
-    
   </div>
+  <!-- =================================== JS VALIDATION START ========================================== -->
+
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+<script>
+  
+  // bootstrapvalidate('#temperature','min:2:Enter at least 2 character');
+
+  bootstrapValidate('#name', 'regex:^[A-z]+$:Must enter character!' );
+  bootstrapValidate('#nid', 'regex:^[0-9]+$:Enter valid NID!' );
+  bootstrapValidate('#nid', 'min:10:NID number must be 10 digit!' );
+ 
+
+
+
+</script>
+<!-- =================================== JS VALIDATION START ========================================== -->
+      
+    </section>
+    <!-- Essential javascripts for application to work-->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="assets/js/plugins/pace.min.js"></script> 
+    <script>
+      $(document).ready(function(){
+        $('#password, #confirmpassword').on('keyup', function () {
+          if ($('#password').val() == $('#confirmpassword').val()) {
+            $('#message').html('Matching').css('color', 'green');
+          } else 
+            $('#message').html('Not Matching').css('color', 'red');
+        });
+      });
+    </script>
+  </body>
       
 
 <?php

@@ -54,7 +54,6 @@ $user="admin";
   
   if($stmt->execute()){
        $message="Insert Row Success";
-      header("Location:add-ambulance-admin.php");
     }
     else{
       $message="Insert Row Fail";
@@ -92,15 +91,15 @@ $user="admin";
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-ambulance"></i>Add Ambulance Service</h3>
            <div class="message text-danger"><?php if($message!="") { echo $message; } ?></div> 
           <div class="form-group">
-            <label class="control-label text-dark">Driver Name <span class="text-danger">*</span></label>
-            <input type="text" name="Driver_Name" id="" class="form-control" placeholder="Driver Name" autocomplete="off">
+            <label class="control-label text-dark">DRIVER NAME: <span class="text-danger">*</span></label>
+            <input type="text" name="Driver_Name" id="name" class="form-control" placeholder="Driver Name" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">Contact Number <span class="text-danger">*</span></label>
-            <input type="text" name="Contact_Number" id="" class="form-control" placeholder="Contact Number" autocomplete="off">
+            <label class="control-label text-dark">MOBILE NUMBER: <span class="text-danger">*</span></label>
+            <input type="text" name="Contact_Number" id="mobile" class="form-control" placeholder="Ambulance driver's mobile number" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">License No <span class="text-danger">*</span></label>
+            <label class="control-label text-dark">LICENSE NO: <span class="text-danger">*</span></label>
             <input type="text" name="License_No" id="" class="form-control" placeholder="License No" autocomplete="off">
           </div>
           <div class="form-group btn-container">
@@ -110,7 +109,18 @@ $user="admin";
         </form>
         
       </div>
+        <!-- =================================== JS VALIDATION START ========================================== -->
 
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+<script>
+  
+  // bootstrapvalidate('#temperature','min:2:Enter at least 2 character');
+
+  bootstrapValidate('#name', 'regex:^[A-z]+$:Must enter character!' );
+  bootstrapValidate('#mobile', 'min:11:Mobile number must be 11 digit!' );
+  bootstrapValidate('#mobile', 'regex:^[0-9]+$:Enter valid mobile number!' );
+</script>
+<!-- =================================== JS VALIDATION START ========================================== -->
     </section>
     <!-- Essential javascripts for application to work-->
     <script src="assets/js/jquery-3.3.1.min.js"></script>

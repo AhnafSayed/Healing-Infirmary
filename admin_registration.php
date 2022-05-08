@@ -78,7 +78,6 @@ if($passwordtest == $confirmpassword){
   
   if($stmt->execute()){
        $message="Insert Row Success";
-      header("Location:admin_registration.php");
     }
     else{
       $message="Insert Row Fail";
@@ -87,7 +86,6 @@ if($passwordtest == $confirmpassword){
   //STMT1 FOR LOGIN TABLE
     if($stmt1->execute()){
       $message="Insert Row Success";
-     header("Location:admin_registration.php");
    }
    else{
      $message="Insert Row Fail";
@@ -96,12 +94,10 @@ if($passwordtest == $confirmpassword){
 }
 else{
   $message="confirm password Not match!";
-  header("Location:admin_registration.php");
 }
 }
 else{
   $message="You file is not an image!";
-  header("Location:admin_registration.php");
 }
 }
 }
@@ -133,29 +129,28 @@ else{
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-users"></i>Add Admin</h3>
            <div class="message text-danger"><?php if($message!="") { echo $message; } ?></div> 
           <div class="form-group">
-            <label class="control-label text-dark">USERNAME <span class="text-danger">*</span></label>
-            <input type="text" name="name" id="" class="form-control" placeholder="Name" autocomplete="off">
+            <label class="control-label text-dark">ADMIN NAME: <span class="text-danger">*</span></label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Name of new admin" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">USER EMAIL <span class="text-danger">*</span></label>
-            <input type="email" name="email" id="" class="form-control" placeholder="Email" autocomplete="off">
+            <label class="control-label text-dark">ADMIN EMAIL: <span class="text-danger">*</span></label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter new admin's email" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">MOBILE <span class="text-danger">*</span></label>
-            <input type="tel" name="mobile" id="" class="form-control" placeholder="Mobile no" autocomplete="off">
+            <label class="control-label text-dark">MOBILE: <span class="text-danger">*</span></label>
+            <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="Mobile number of new admin" autocomplete="off">
           </div>
-
           <div class="form-group">
-            <label class="control-label text-dark">PASSWORD <span class="text-danger">*</span></label>
+            <label class="control-label text-dark">PASSWORD: <span class="text-danger">*</span></label>
             <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off" id="password">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">RE-TYPE PASSWORD <span class="text-danger">*</span></label>
-            <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Re-Type Password" autocomplete="off">
+            <label class="control-label text-dark">CONFIRM PASSWORD: <span class="text-danger">*</span></label>
+            <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Confirm password" autocomplete="off">
             <span id='message'></span>
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">Image <span class="text-danger">*</span></label>
+            <label class="control-label text-dark">Image: <span class="text-danger">*</span></label>
             <input type="file" name="image" id="" class="form-control">
           </div>
           <div class="form-group btn-container">
@@ -165,7 +160,25 @@ else{
         </form>
         
       </div>
+    <!-- =================================== JS VALIDATION START ========================================== -->
 
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+<script>
+  
+  // bootstrapvalidate('#temperature','min:2:Enter at least 2 character');
+
+  bootstrapValidate('#name', 'regex:^[A-z]+$:Must enter character!' );
+  bootstrapValidate('#email', 'email:Enter valid email!' );
+  bootstrapValidate('#password', 'min:4:Password must be 4 digit!' );
+  bootstrapValidate('#mobile', 'min:11:Mobile number must be 11 digit!' );
+  bootstrapValidate('#mobile', 'regex:^[0-9]+$:Enter valid mobile number!' );
+ 
+
+
+
+</script>
+<!-- =================================== JS VALIDATION START ========================================== -->
+      
     </section>
     <!-- Essential javascripts for application to work-->
     <script src="assets/js/jquery-3.3.1.min.js"></script>

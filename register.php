@@ -134,24 +134,24 @@ else{
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-users"></i>User Registration</h3>
            <div class="message text-danger"><?php if($message!="") { echo $message; } ?></div> 
           <div class="form-group">
-            <label class="control-label text-dark">USERNAME <span class="text-danger">*</span></label>
-            <input type="text" name="name" id="uname" class="form-control" placeholder="Name" autocomplete="off">
+            <label class="control-label text-dark">NAME: <span class="text-danger">*</span></label>
+            <input type="text" name="name" id="uname" class="form-control" placeholder="Enter your name" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">USER EMAIL <span class="text-danger">*</span></label>
-            <input type="email" name="email" id="umail" class="form-control" placeholder="Email" autocomplete="off">
+            <label class="control-label text-dark">USER EMAIL: <span class="text-danger">*</span></label>
+            <input type="email" name="email" id="umail" class="form-control" placeholder="Enter your email" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">MOBILE <span class="text-danger">*</span></label>
-            <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="Mobile no" autocomplete="off">
+            <label class="control-label text-dark">MOBILE: <span class="text-danger">*</span></label>
+            <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="Enter your mobile number" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">PASSWORD <span class="text-danger">*</span></label>
-            <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off" id="password">
+            <label class="control-label text-dark">PASSWORD: <span class="text-danger">*</span></label>
+            <input type="password" name="password" class="form-control" placeholder="Your password" autocomplete="off" id="password">
           </div>
           <div class="form-group">
-            <label class="control-label text-dark">RE-TYPE PASSWORD <span class="text-danger">*</span></label>
-            <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="RE-type Password" autocomplete="off">
+            <label class="control-label text-dark">CONFIRM PASSWORD: <span class="text-danger">*</span></label>
+            <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Confirm password" autocomplete="off">
             <span id='message'></span>
           </div>
 
@@ -163,8 +163,8 @@ else{
 
 
           <div class="form-group">
-            <label class="control-label text-dark"> ADDRESS <span class="text-danger">*</span></label>
-            <input type="address" name="address" id="address" class="form-control" placeholder=" YOUR CURRENT ADDRESS" autocomplete="off">
+            <label class="control-label text-dark">ADDRESS: <span class="text-danger">*</span></label>
+            <input type="address" name="address" id="address" class="form-control" placeholder="Your current address" autocomplete="off">
             <span id='message'></span>
           </div>
 
@@ -181,14 +181,14 @@ else{
 			  </select>
 		  </div>
           <div class="form-group">
-            <label class="control-label text-dark">Image <span class="text-danger">*</span></label>
+            <label class="control-label text-dark">Image: <span class="text-danger">*</span></label>
             <input type="file" name="image" id="" class="form-control">
           </div>
           <div class="form-group btn-container">
             <button class="btn btn-primary btn-block" type="submit" name="submit" value="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN UP</button>
           </div>
           <br>
-          <center><a href="login.php">already have an account?</a></center> 
+          <center><a href="login.php">Already have an account?</a></center> 
 
         </form>
         
@@ -205,10 +205,11 @@ else{
   
   // bootstrapvalidate('#temperature','min:2:Enter at least 2 character');
 
-  bootstrapValidate('#uname', 'regex:^[a-z]+$:must enter Character' );
-  bootstrapValidate('#umail', 'email:Enter valid Email' );
-  bootstrapValidate('#mobile', 'min:11:Enter valid Mobile no' );
-  bootstrapValidate('#password', 'min:4:ENter must be 4 digit' );
+  bootstrapValidate('#uname', 'regex:^[A-z]+$:Must enter character!' );
+  bootstrapValidate('#umail', 'email:Enter valid email!' );
+  bootstrapValidate('#password', 'min:4:Password must be 4 digit!' );
+  bootstrapValidate('#mobile', 'min:11:Mobile number must be 11 digit!' );
+  bootstrapValidate('#mobile', 'regex:^[0-9]+$:Enter valid mobile number!' );
  
 
 

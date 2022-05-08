@@ -124,7 +124,6 @@ else{
     <link rel="stylesheet" type="text/css" href="assets/css/docreg.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login -  Admin</title>
   
   </head>
   <body>
@@ -146,7 +145,7 @@ else{
 
            <div class="form-group">
             <label class="nid text-dark"> NAME <span class="text-danger">*</span></label>
-            <input type="text" name="name" id="name" class="form-control" placeholder=" ENTER YOUR NAME" autocomplete="off">
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" autocomplete="off">
           </div>
 
           <div class="form-group">
@@ -181,7 +180,7 @@ else{
 
 
           <div class="form-group">
-            <label class="control-label text-dark">BIRTH DATE :<span class="text-danger">*</span></label>
+            <label class="control-label text-dark">BIRTH DATE:<span class="text-danger">*</span></label>
             <input type="date" name="birthdate" id="" class="form-control"  autocomplete="off">
           </div>
 
@@ -189,34 +188,34 @@ else{
 
           <div class="form-group">
             <label class="nid text-dark">NID/PASSPORT NO: <span class="text-danger">*</span></label>
-            <input type="text" name="nid" id="nid" class="form-control" placeholder="NID/PASSPORT NO" autocomplete="off">
+            <input type="text" name="nid" id="nid" class="form-control" placeholder="NID or passport number" autocomplete="off">
           </div>
           <div class="form-group">
-            <label class="reg-no text-dark">REGISTRATION NO(BMDC) <span class="text-danger">*</span></label>
-            <input type="text" name="bmdc" id="regi" class="form-control" placeholder="REGISTRATION NO(BMDC)" autocomplete="off">
+            <label class="reg-no text-dark">REGISTRATION NO (BMDC) <span class="text-danger">*</span></label>
+            <input type="text" name="bmdc" id="regi" class="form-control" placeholder="BMDC registration number (AXXXXX-ZXXXXX)" autocomplete="off">
           </div>
           <div class="form-group">
             <label class="mobile text-dark">MOBILE NO: <span class="text-danger">*</span></label>
-            <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="MOBILE NO" autocomplete="off">
+            <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="Enter your mobile number" autocomplete="off">
           </div>
           <div class="form-group">
             <label class="email text-dark">EMAIL: <span class="text-danger">*</span></label>
-            <input type="email" name="email" id="email" class="form-control" placeholder=" Doctor email" autocomplete="off">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" autocomplete="off">
           </div>
           <div class="form-group">
             <label class="control-label text-dark">PASSWORD <span class="text-danger">*</span></label>
-            <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off" id="password">
+            <input type="password" name="password" class="form-control" placeholder="Your password" autocomplete="off" id="password">
           </div>
 
           <div class="form-group">
-            <label class="control-label text-dark"> RE-TYPE-PASSWORD <span class="text-danger">*</span></label>
-            <input type="password" name="password" class="form-control" placeholder="RE-TYPE-PASSWORD" autocomplete="off" id="confirmpassword">
+            <label class="control-label text-dark">CONFIRM PASSWORD <span class="text-danger">*</span></label>
+            <input type="password" name="password" class="form-control" placeholder="Confirm password" autocomplete="off" id="confirmpassword">
              <span id='message'></span>
           </div>
          
           <div class="form-group">
             <label class="control-label text-dark"> ADDRESS <span class="text-danger">*</span></label>
-            <input type="address" name="address" id="address" class="form-control" placeholder=" YOUR CURRENT ADDRESS" autocomplete="off">
+            <input type="address" name="address" id="address" class="form-control" placeholder="Your current address" autocomplete="off">
            
           </div>
 
@@ -258,12 +257,14 @@ else{
   
   // bootstrapvalidate('#temperature','min:2:Enter at least 2 character');
 
-  bootstrapValidate('#name', 'regex:^[a-z]+$:must enter Character' );
-  bootstrapValidate('#nid', 'regex:^[0-9]+$:Enter Valid NID' );
-  bootstrapValidate('#regi', 'regex:^[0-9]+$:Enter Valid BMDC' );
-  bootstrapValidate('#email', 'email:Enter valid Email' );
-  bootstrapValidate('#mobile', 'min:11:Enter valid Mobile no' );
-  bootstrapValidate('#password', 'min:4:ENter must be 4 digit' );
+  bootstrapValidate('#name', 'regex:^[A-z]+$:Must enter character!' );
+  bootstrapValidate('#nid', 'regex:^[0-9]+$:Enter valid NID!' );
+  bootstrapValidate('#nid', 'min:10:NID number must be 10 digit!' );
+  bootstrapValidate('#regi', 'min:6:BMDC number must be 6 digit!' );
+  bootstrapValidate('#email', 'email:Enter valid email!' );
+  bootstrapValidate('#password', 'min:4:Password must be 4 digit!' );
+  bootstrapValidate('#mobile', 'min:11:Mobile number must be 11 digit!' );
+  bootstrapValidate('#mobile', 'regex:^[0-9]+$:Enter valid mobile number!' );
  
 
 

@@ -135,7 +135,7 @@ else{
           <form action="user-payment.php" method="post" class="form-horizontal" enctype="multipart/form-data">
 
             <label class="control-label">Name:<span class="text-danger">*</span></label>
-            <input type="text" name="name" class="form-control" placeholder="Name" autocomplete="off">
+            <input type="text" name="name" id="name" class="form-control" placeholder="Name" autocomplete="off">
           </div>
 
           <div class="form-group">
@@ -149,7 +149,7 @@ else{
         
           <div class="form-group">
             <label class="control-label">Transaction ID:<span class="text-danger">*</span></label>
-            <input type="text" name="tranxid" class="form-control" placeholder="Transaction ID" autocomplete="off">
+            <input type="text" name="tranxid" id="tranxid" class="form-control" placeholder="Transaction ID" autocomplete="off">
             <span id='message'></span>
           </div>
 
@@ -160,7 +160,7 @@ else{
 
           <div class="form-group">
             <label class="control-label">Last Three Digit: <span class="text-danger">*</span></label>
-            <input type="text" name="lastthreedigit" rows="10" cols="50" class="form-control"  placeholder="Last the three digit of your phone number!">
+            <input type="text" name="lastthreedigit" id="threedigit" rows="10" cols="50" class="form-control"  placeholder="Last the three digit of your phone number!">
           </div>
 
           <div class="form-group">
@@ -175,9 +175,45 @@ else{
         </form>
       </div>
     </div>
-    
   </div>
+  <!-- =================================== JS VALIDATION START ========================================== -->
+
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+<script>
+  
+  // bootstrapvalidate('#temperature','min:2:Enter at least 2 character');
+
+  bootstrapValidate('#name', 'regex:^[A-z]+$:Must enter character!' );
+  bootstrapValidate('#tranxid', 'min:10:Enter valid transaction id!' );
+  bootstrapValidate('#threedigit', 'regex:^[0-9]+$:Enter valid last three digit of your mobile number!' );
+  bootstrapValidate('#threedigit', 'min:3:Enter last three digit of your mobile number!' );
+ 
+
+
+
+</script>
+<!-- =================================== JS VALIDATION START ========================================== -->
       
+    </section>
+    <!-- Essential javascripts for application to work-->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="assets/js/plugins/pace.min.js"></script> 
+    <script>
+      $(document).ready(function(){
+        $('#password, #confirmpassword').on('keyup', function () {
+          if ($('#password').val() == $('#confirmpassword').val()) {
+            $('#message').html('Matching').css('color', 'green');
+          } else 
+            $('#message').html('Not Matching').css('color', 'red');
+        });
+      });
+    </script>
+  </body>
     </main>
 
     <?php 
