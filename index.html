@@ -344,7 +344,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-7">
 								<div class="custom_body_2">
 									<h4 class="card-title"><b>Do online fast aid course.</b></h4>
-									<p>By <span class="first_color">Sheck Obidullah</span></p>
+									<p>By <span class="first_color">Sheikh Obidullah</span></p>
 									<p>05 Mar 2022 | <i class="fa fa-comments" aria-hidden="true"></i> 3</p>
 									<p class="card-text text-left">
 										Learn about fast aid more and complete a small paid course from Healing Infirmary System.
