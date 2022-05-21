@@ -41,12 +41,7 @@
         <span class="app-menu__label">Dashboard</span>
       </a>
     </li>
-    <li>
-      <a class="app-menu__item active" href="admin_registration.php">
-       <i class="app-menu__icon fa fa-edit"></i>
-        <span class="app-menu__label">Add Admin</span>
-      </a>
-    </li>
+    
     <li>
       <a class="app-menu__item active" href="add-doctor-admin.php">
        <i class="app-menu__icon fa fa-edit"></i>

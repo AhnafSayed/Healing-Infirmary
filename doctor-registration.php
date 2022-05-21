@@ -156,7 +156,7 @@ else{
 			    <option value="Dr">Dr.</option>
 			    <option value="Prof">Prof. Dr.</option>
 			    <option value="Assoc">Assoc. Prof. Dr.</option>
-			    <option value="Asst">Asst. Prof. Dr.</option>
+			    <option value="Asst Prof">Asst. Prof. Dr.</option>
 			    
 			  </select>
 		  </div>

@@ -91,7 +91,6 @@ if($password== $cpassword){
 }
 else{
   $message="confirm password Not match!";
-  header("Location:add-doctor-admin.php");
 }
 
 //check name 
@@ -216,7 +215,7 @@ else{
 
           <div class="form-group">
             <label class="control-label text-dark">CONFIRM PASSWORD: <span class="text-danger">*</span></label>
-            <input type="password" name="password" class="form-control" placeholder="Confirm password" autocomplete="off" id="confirmpassword">
+            <input type="password" name="cpassword" class="form-control" placeholder="Confirm password" autocomplete="off" id="confirmpassword">
              <span id='message'></span>
           </div>
          

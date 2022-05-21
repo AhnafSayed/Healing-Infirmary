@@ -61,7 +61,12 @@
         <span class="app-menu__label"> Approve Appointment</span>
       </a>
     </li>
-
+    <li>
+      <a class="app-menu__item active" href="prescription-upload.php">
+       <i class="app-menu__icon fa fa-edit"></i>
+        <span class="app-menu__label">Prescribe Medicine</span>
+      </a>
+    </li> 
   
 
      <li>
