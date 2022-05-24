@@ -326,7 +326,7 @@
 									<p>By <span class="first_color">Ahnaf Sayed</span></p>
 									<p>22 Mar 2022 | <i class="fa fa-comments" aria-hidden="true"></i> 2</p>
 									<p class="card-text text-left">
-										Make appointment for your choosen doctor through Healing Infirmary System.
+										Make appointment for your chosen doctor through Healing Infirmary System.
 									</p>
 								</div>
 								<!--  -->
